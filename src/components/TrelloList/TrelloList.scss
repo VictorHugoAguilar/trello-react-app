@@ -1,0 +1,10 @@
+@import '../../assets//sass/colors.scss';
+.trelloList {
+    border: thin solid red;
+    all: unset;
+    background-color: $solid;
+    width: 300px;
+    height: 50vh;
+    border-radius: 0.5em;
+    h4 {}
+}
