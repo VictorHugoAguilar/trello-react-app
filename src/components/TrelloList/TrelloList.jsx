@@ -6,10 +6,11 @@ import TrelloCard from '../TrelloCard/TrelloCard';
 
 const TrelloList = ({ title }) => {
 
-    return (<div className="trelloList">
-        <h4>{title}</h4>
-        <TrelloCard />
-    </div>
+    return (
+        <div className="trelloList">
+            <h4>{title}</h4>
+            <TrelloCard />
+        </div>
     );
 
 }
