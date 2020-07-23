@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Icon, Card, Button } from '@material-ui/core';
 import TextareaAutosize from 'react-textarea-autosize';
-
+import { connect } from 'react-redux';
+import { addList } from '../../actions'
 // Importamos los estilos personalizados
 import './TrelloActionButton.scss';
 
@@ -73,4 +74,4 @@ class TrelloActionButton extends Component {
     }
 }
 
-export default TrelloActionButton;
+export default connect() (TrelloActionButton);

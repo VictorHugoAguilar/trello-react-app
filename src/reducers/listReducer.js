@@ -1,3 +1,9 @@
+// Importamos las constantes de las acciones
+import { CONSTANTS } from '../actions';
+
+// Creamos una variable para la creación de ID, ya que no usamos un generador de ID
+let listID = 2;
+
 const initialState = [
     {
         id: 0,
@@ -35,6 +41,20 @@ const initialState = [
 
 const listReducer = (state, action) => {
     switch(action.type){
+        case CONSTANTS.ADD_LIST:
+            const newList = {
+                id: listID,
+                title: action.payload.title,
+                cards: [] 
+            }
+            listID++;
+            return [...state, newList]
+            break;
+        case CONSTANTS.ADD_CARD:
+            const newCard = {
+
+            };
+            break;
         default:
             return initialState;
     }
