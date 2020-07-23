@@ -15,11 +15,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        {
-          lists?.map(list => (
-            <TrelloList key={list.id} title={list.title} cards={list.cards} />
-          ))
-        }
+        <div className="listTrello">
+          {
+            lists?.map(list => (
+              <TrelloList key={list.id} title={list.title} cards={list.cards} />
+            ))
+          }
+        </div>
       </div>
     );
   }
