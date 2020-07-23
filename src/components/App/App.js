@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 import TrelloList from '../TrelloList/TrelloList';
 
 import { connect } from 'react-redux';
+import TrelloActionButton from '../TrelloActionButton/TrelloActionButton';
 
 class App extends Component {
 
@@ -21,6 +22,7 @@ class App extends Component {
               <TrelloList key={list.id} title={list.title} cards={list.cards} />
             ))
           }
+        <TrelloActionButton list/>
         </div>
       </div>
     );

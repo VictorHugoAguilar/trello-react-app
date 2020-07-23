@@ -1,6 +1,7 @@
 @import '../../assets/sass/colors.scss';
 .TrelloActionButton {
-    width: 95%;
+    margin-top: 10px;
+    width: 286px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -12,9 +13,10 @@
 
 .CardAction {
     .CardAdd {
+        margin-top: 10px;
         overflow: hidden;
         min-height: 64px;
-        min-width: 95%;
+        min-width: 286px;
         padding: 0.4em;
         .TextAreaAdd {
             resize: none;
@@ -23,8 +25,13 @@
             border: none;
         }
     }
+    .CardButton {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
     .CardButton button {
-        width: 100%;
+        width: 80%;
         margin-top: 0.8em;
         color: white;
         text-shadow: 2px 2px 1px rgba(100, 100, 100, 0.5);
@@ -34,5 +41,9 @@
         transition: background-color 0.5s ease;
         text-shadow: 2px 2px 1px rgba(100, 100, 100, 0.5);
         background-color: $medium;
+    }
+    .CardButton #iconCancel {
+        padding-left: 0.5em;
+        padding-top: 0.8em;
     }
 }

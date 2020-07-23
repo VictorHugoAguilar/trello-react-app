@@ -62,6 +62,7 @@ class TrelloActionButton extends Component {
                 </Card>
                 <div className="CardButton">
                     <Button variant="contained">{titleButton}</Button>
+                    <Icon id="iconCancel" >cancelpresentation</Icon>
                 </div>
             </div>
         );
