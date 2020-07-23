@@ -1,11 +1,11 @@
 import React from 'react';
+// Importamos Estilos
 import './Header.scss';
-
-const Header = () => {
-
+import ListAltRoundedIcon from '@material-ui/icons/ListAltRounded'; const Header = () => {
     return (
         <div className="header">
-            <h2>Trello</h2>
+            <ListAltRoundedIcon style={{ fontSize: 40, paddingLeft: 60, paddingTop: 20 }} />
+            <h1 className="titulo">Trello</h1>
         </div>
     );
 

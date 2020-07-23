@@ -25,34 +25,34 @@ class TrelloActionButton extends Component {
         this.setState({ text: e.target.value });
     }
 
-    handleAddList = () =>{
+    handleAddList = () => {
         console.log(this.state);
-        
-        const { dispatch} = this.props;
+
+        const { dispatch } = this.props;
         const { text } = this.state;
 
-        if(text){
+        if (text) {
             dispatch(addList(text));
             this.resetTextBox();
         }
         return;
-    } 
+    }
 
     handleAddCard = () => {
         console.log(this.state);
-        
+
         const { dispatch, listID } = this.props;
         const { text } = this.state;
 
-        if(text){
+        if (text) {
             dispatch(addCard(listID, text));
             this.resetTextBox();
         }
         return;
     }
-    
+
     resetTextBox = () => {
-        this.setState({text:""});
+        this.setState({ text: "" });
     }
 
     trelloAdd = () => {
@@ -61,6 +61,7 @@ class TrelloActionButton extends Component {
         const textButton = list ? "Añade otra lista " : "Añade otra tarjeta";
         const textOpacityButton = list ? 1 : 0.5;
         const textColorButton = list ? "white" : "black";
+        const positionButton = list ? "12vh" : "10px";
         return (
             <div
                 onClick={this.openForm}
@@ -68,6 +69,7 @@ class TrelloActionButton extends Component {
                 style={{
                     opacity: textOpacityButton,
                     color: textColorButton,
+                    marginTop: positionButton,
                 }}>
                 <Icon>add_circle</Icon>
                 <p>{textButton} </p>
@@ -79,9 +81,12 @@ class TrelloActionButton extends Component {
         const { list } = this.props;
         const placeholder = list ? "Introduce el título de la lista..." : "Introduce el título de la tarjeta...";
         const titleButton = list ? "Añade Lista" : "Añade Tarjeta";
+        const positionButton = list ? "12vh" : "10px";
 
         return (
-            <div className="CardAction">
+            <div className="CardAction" style={{
+                marginTop: positionButton,
+            }}>
                 <Card className="CardAdd">
                     <TextareaAutosize
                         className="TextAreaAdd"
@@ -92,7 +97,7 @@ class TrelloActionButton extends Component {
                         autoFocus />
                 </Card>
                 <div className="CardButton">
-                    <Button 
+                    <Button
                         onMouseDown={list ? this.handleAddList : this.handleAddCard}
                         variant="contained">{titleButton}</Button>
                     <Icon id="iconCancel" >cancelpresentation</Icon>
@@ -106,4 +111,4 @@ class TrelloActionButton extends Component {
     }
 }
 
-export default connect() (TrelloActionButton);
+export default connect()(TrelloActionButton);

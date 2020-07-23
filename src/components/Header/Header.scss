@@ -1,6 +1,13 @@
 @import '../../assets/sass/colors.scss';
 .header {
+    position: fixed;
+    width: 100%;
     background-color: $medium;
     color: wheat;
-    height: 5vh;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    .titulo {
+        padding-left: 10px;
+    }
 }
