@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Icon, Card, Button } from '@material-ui/core';
 import TextareaAutosize from 'react-textarea-autosize';
- 
+
 // Importamos los estilos personalizados
 import './TrelloActionButton.scss';
 
@@ -10,18 +10,18 @@ class TrelloActionButton extends Component {
     state = {
         formOpen: false,
         text: ""
-    } 
+    }
 
     openForm = () => {
-        this.setState({formOpen: true});
+        this.setState({ formOpen: true });
     }
 
     closeForm = (e) => {
-      this.setState({formOpen: false});  
+        this.setState({ formOpen: false });
     }
 
     handleInputChange = (e) => {
-        this.setState({text: e.target.value});
+        this.setState({ text: e.target.value });
     }
 
     trelloAdd = () => {
@@ -50,19 +50,19 @@ class TrelloActionButton extends Component {
         const titleButton = list ? "Añade Lista" : "Añade Tarjeta";
 
         return (
-            <div>
-            <Card className="CardAdd">
-                <TextareaAutosize
-                    className="TextAreaAdd" 
-                    value={this.state.text}
-                    onChange={this.handleInputChange}
-                    onBlur={this.closeForm} 
-                    placeholder={placeholder} 
-                    autoFocus/>
-            </Card>
-            <div>
-                <Button />
-            </div>
+            <div className="CardAction">
+                <Card className="CardAdd">
+                    <TextareaAutosize
+                        className="TextAreaAdd"
+                        value={this.state.text}
+                        onChange={this.handleInputChange}
+                        onBlur={this.closeForm}
+                        placeholder={placeholder}
+                        autoFocus />
+                </Card>
+                <div className="CardButton">
+                    <Button variant="contained">{titleButton}</Button>
+                </div>
             </div>
         );
     }

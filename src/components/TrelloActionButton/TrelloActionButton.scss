@@ -1,3 +1,4 @@
+@import '../../assets/sass/colors.scss';
 .TrelloActionButton {
     width: 95%;
     display: flex;
@@ -9,15 +10,29 @@
     background-color: rgba(10, 10, 10, .15);
 }
 
-.CardAdd {
-    overflow: hidden;
-    min-height: 64px;
-    min-width: 95%;
-    padding: 0.4em;
-    .TextAreaAdd {
-        resize: none;
+.CardAction {
+    .CardAdd {
+        overflow: hidden;
+        min-height: 64px;
+        min-width: 95%;
+        padding: 0.4em;
+        .TextAreaAdd {
+            resize: none;
+            width: 100%;
+            outline: none;
+            border: none;
+        }
+    }
+    .CardButton button {
         width: 100%;
-        outline: none;
-        border: none;
+        margin-top: 0.8em;
+        color: white;
+        text-shadow: 2px 2px 1px rgba(100, 100, 100, 0.5);
+        background-color: $ligth;
+    }
+    .CardButton button:hover {
+        transition: background-color 0.5s ease;
+        text-shadow: 2px 2px 1px rgba(100, 100, 100, 0.5);
+        background-color: $medium;
     }
 }
