@@ -11,7 +11,7 @@ import TrelloActionButton from '../TrelloActionButton/TrelloActionButton';
 class App extends Component {
 
   render() {
-    const { lists } = this.props
+    const { lists } = this.props;
     console.log(lists)
     return (
       <div className="App">
@@ -19,7 +19,7 @@ class App extends Component {
         <div className="listTrello">
           {
             lists?.map(list => (
-              <TrelloList key={list.id} title={list.title} cards={list.cards} />
+              <TrelloList listID={list.id} key={list.id} title={list.title} cards={list.cards} />
             ))
           }
         <TrelloActionButton list/>

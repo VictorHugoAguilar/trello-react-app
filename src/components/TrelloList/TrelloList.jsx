@@ -5,7 +5,7 @@ import './TrelloList.scss';
 import TrelloCard from '../TrelloCard/TrelloCard';
 import TrelloActionButton from '../TrelloActionButton/TrelloActionButton';
 
-const TrelloList = ({ title, cards }) => {
+const TrelloList = ({ title, cards, listID }) => {
 
     return (
         <div className="trelloList">
@@ -15,7 +15,7 @@ const TrelloList = ({ title, cards }) => {
                     <TrelloCard key={card.id} text={card.text} />
                 ))
             }
-            <TrelloActionButton  />
+            <TrelloActionButton listID={listID}/>
         </div>
     );
 

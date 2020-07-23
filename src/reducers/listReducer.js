@@ -1,60 +1,79 @@
+// Importamos un generador ID
+import nextId from "react-id-generator";
+
 // Importamos las constantes de las acciones
 import { CONSTANTS } from '../actions';
 
-// Creamos una variable para la creación de ID, ya que no usamos un generador de ID
-let listID = 2;
-
 const initialState = [
     {
-        id: 0,
+        id: nextId(),
         title: "Primer List de Card",
         cards: [
             {
-                id: 0,
+                id: nextId(),
                 text: "Primer cards",
             },
             {
-                id:1,
+                id: nextId(),
                 text: "Segunda card de prueba"
             }
         ]
     },
     {
-        id: 1,
+        id: nextId(),
         title: "Segunda List de Card",
         cards: [
             {
-                id: 0,
+                id: nextId(),
                 text: "Primer cards",
             },
             {
-                id:1,
+                id: nextId(),
                 text: "Segunda card de prueba"
             },
             {
-                id:3,
+                id: nextId(),
                 text: "Tercera card de prueba"
             }
         ]
     }
 ]
 
-const listReducer = (state, action) => {
-    switch(action.type){
+const listReducer = (state = initialState, action) => {
+    switch (action.type) {
         case CONSTANTS.ADD_LIST:
             const newList = {
-                id: listID,
+                id: nextId(),
                 title: action.payload,
-                cards: [] 
+                cards: []
             }
-            listID++;
             return [...state, newList]
-            break;
         case CONSTANTS.ADD_CARD:
             const newCard = {
-
+                id: nextId(),
+                text: action.payload.text,
             };
-            break;
+            // console.log(newCard);
+            //console.log(action.payload.listID)
+            const newState = state.map(list => {
+                console.log("dentro del nuevo estate ",action.payload.listID)
+                
+                if (list.id === action.payload.listID) {
+
+                    console.log("dentro del newState", list)
+                   
+                    return {
+                        ...list,
+                        cards: [ ...list.cards, newCard] 
+                    }
+
+                }else{
+
+                    return list;
+                    
+                }
+            })
+            return newState;
         default:
             return initialState;
     }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Icon, Card, Button } from '@material-ui/core';
 import TextareaAutosize from 'react-textarea-autosize';
 import { connect } from 'react-redux';
-import { addList } from '../../actions'
+import { addList, addCard } from '../../actions'
 // Importamos los estilos personalizados
 import './TrelloActionButton.scss';
 
@@ -32,10 +32,28 @@ class TrelloActionButton extends Component {
         const { text } = this.state;
 
         if(text){
-            dispatch(addList(text))
+            dispatch(addList(text));
+            this.resetTextBox();
         }
         return;
     } 
+
+    handleAddCard = () => {
+        console.log(this.state);
+        
+        const { dispatch, listID } = this.props;
+        const { text } = this.state;
+
+        if(text){
+            dispatch(addCard(listID, text));
+            this.resetTextBox();
+        }
+        return;
+    }
+    
+    resetTextBox = () => {
+        this.setState({text:""});
+    }
 
     trelloAdd = () => {
         const { list } = this.props;
@@ -75,7 +93,7 @@ class TrelloActionButton extends Component {
                 </Card>
                 <div className="CardButton">
                     <Button 
-                        onMouseDown={this.handleAddList}
+                        onMouseDown={list ? this.handleAddList : this.handleAddCard}
                         variant="contained">{titleButton}</Button>
                     <Icon id="iconCancel" >cancelpresentation</Icon>
                 </div>
