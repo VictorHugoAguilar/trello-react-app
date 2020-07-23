@@ -8,3 +8,16 @@
     padding-left: 15px;
     background-color: rgba(10, 10, 10, .15);
 }
+
+.CardAdd {
+    overflow: hidden;
+    min-height: 64px;
+    min-width: 95%;
+    padding: 0.4em;
+    .TextAreaAdd {
+        resize: none;
+        width: 100%;
+        outline: none;
+        border: none;
+    }
+}
