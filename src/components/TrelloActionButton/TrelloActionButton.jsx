@@ -25,6 +25,18 @@ class TrelloActionButton extends Component {
         this.setState({ text: e.target.value });
     }
 
+    handleAddList = () =>{
+        console.log(this.state);
+        
+        const { dispatch} = this.props;
+        const { text } = this.state;
+
+        if(text){
+            dispatch(addList(text))
+        }
+        return;
+    } 
+
     trelloAdd = () => {
         const { list } = this.props;
 
@@ -62,7 +74,9 @@ class TrelloActionButton extends Component {
                         autoFocus />
                 </Card>
                 <div className="CardButton">
-                    <Button variant="contained">{titleButton}</Button>
+                    <Button 
+                        onMouseDown={this.handleAddList}
+                        variant="contained">{titleButton}</Button>
                     <Icon id="iconCancel" >cancelpresentation</Icon>
                 </div>
             </div>
