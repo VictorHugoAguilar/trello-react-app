@@ -1,4 +1,5 @@
 import React from 'react';
+import './TrelloCard.scss';
 // Importamos Material
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';

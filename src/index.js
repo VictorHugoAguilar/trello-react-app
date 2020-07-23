@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 // Importamos componentes del core
 import { Provider } from 'react-redux';
-import store from './store/store';
+import store from './store';
 // Importamos los estilo
 import './index.scss';
 // Importamos los componentes
