@@ -3,7 +3,7 @@ import { Icon, Card, Button } from '@material-ui/core';
 import TextareaAutosize from 'react-textarea-autosize';
 import { connect } from 'react-redux';
 import { addList, addCard } from '../../actions'
-// Importamos los estilos personalizados
+// Importamos los estilos personalizados para el componente
 import './TrelloActionButton.scss';
 
 class TrelloActionButton extends Component {
@@ -26,8 +26,6 @@ class TrelloActionButton extends Component {
     }
 
     handleAddList = () => {
-        console.log(this.state);
-
         const { dispatch } = this.props;
         const { text } = this.state;
 
@@ -39,8 +37,6 @@ class TrelloActionButton extends Component {
     }
 
     handleAddCard = () => {
-        console.log(this.state);
-
         const { dispatch, listID } = this.props;
         const { text } = this.state;
 

@@ -67,12 +67,8 @@ const listReducer = (state = initialState, action) => {
                 text: action.payload.text,
             };
             cardID += 1;
-            // console.log(newCard);
-            //console.log(action.payload.listID)
             const newState = state.map(list => {
-                // console.log("dentro del nuevo estate ", action.payload.listID)
                 if (list.id === action.payload.listID) {
-                    // console.log("dentro del newState", list)
                     return {
                         ...list,
                         cards: [...list.cards, newCard]
@@ -88,8 +84,8 @@ const listReducer = (state = initialState, action) => {
                 droppableIdEnd,
                 droppableIndexStart,
                 droppableIndexEnd,
-                draggableId,
                 type
+                //draggableId,
             } = action.payload;
             const newState = [...state];
             // Movemos las listas

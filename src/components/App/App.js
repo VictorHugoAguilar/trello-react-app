@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// Importamos los estilos
+// Importamos los estilos personalizados para el componente
 import './App.scss';
 // Importamos componentes para DropAndDrag
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
@@ -15,7 +15,6 @@ class App extends Component {
 
   onDragEnd = (result) => {
     const { dispatch } = this.props;
-     console.log(result);
     const { destination, source, draggableId, type } = result;
 
     if (!destination) {
@@ -35,7 +34,6 @@ class App extends Component {
 
   render() {
     const { lists } = this.props;
-    // console.log(lists)
     return (
       <div className="App">
         <Header />
