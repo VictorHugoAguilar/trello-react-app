@@ -30,7 +30,7 @@ const TrelloList = ({ title, cards, listID, index }) => {
                                 >
                                     <h4>{title}</h4>
                                     {
-                                        cards?.map((card, index) => (
+                                        cards?.map( (card, index) => (
                                             <TrelloCard
                                                 key={card.id}
                                                 id={card.id}
