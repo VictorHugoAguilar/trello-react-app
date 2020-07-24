@@ -15,8 +15,8 @@ class App extends Component {
 
   onDragEnd = (result) => {
     const { dispatch } = this.props;
-    // console.log(result);
-    const { destination, source, draggableId , type} = result;
+     console.log(result);
+    const { destination, source, draggableId, type } = result;
 
     if (!destination) {
       return;
@@ -29,7 +29,7 @@ class App extends Component {
       destination.index,
       draggableId,
       type
-    ) 
+    )
     );
   }
 
@@ -40,20 +40,29 @@ class App extends Component {
       <div className="App">
         <Header />
         <DragDropContext onDragEnd={this.onDragEnd}>
-          <Droppable droppableId="all-lists" direction="horizontal" type="list" >
+          <Droppable 
+            droppableId="all-lists" 
+            direction="horizontal" 
+            type="list" 
+          >
             {provided => (
-              <div { ...provided.droppableProps }  ref={provided.innerRef} className="listTrello">
+              <div
+                {...provided.droppableProps}
+                ref={provided.innerRef}
+                className="listTrello"
+              >
                 {
                   lists?.map((list, index) => (
-                    <TrelloList 
-                      listID={list.id} 
-                      key={list.id} 
-                      title={list.title} 
+                    <TrelloList
+                      listID={list.id}
+                      key={list.id}
+                      title={list.title}
                       cards={list.cards}
-                      index={index} 
+                      index={index}
                     />
                   ))
                 }
+                {provided.placeholder}
                 <TrelloActionButton list />
               </div>
             )}

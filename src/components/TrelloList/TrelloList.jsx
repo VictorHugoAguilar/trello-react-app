@@ -9,7 +9,10 @@ import TrelloActionButton from '../TrelloActionButton/TrelloActionButton';
 
 const TrelloList = ({ title, cards, listID, index }) => {
     return (
-        <Draggable draggableId={String(listID)} index={index}>
+        <Draggable 
+            draggableId={String(listID)} 
+            index={index}
+        >
             {provided => (
                 <div 
                     ref={provided.innerRef}

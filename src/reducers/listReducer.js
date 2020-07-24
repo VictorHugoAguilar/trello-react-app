@@ -114,7 +114,7 @@ const listReducer = (state = initialState, action) => {
                 // lista de donde sacamos la tarjeta
                 const listStart = state.find( list => droppableIdStart === list.id );
                 // quitamos la tarjeta de la lista
-                const card = listStart.cards.splice( droppableIdStart, 1 );
+                const card = listStart.cards.splice( droppableIndexStart, 1 );
                 // sacamos la lista de destino
                 const listEnd = state.find(list => droppableIdEnd === list.id);
                 // metemos la tarjeta en la lista de destino
