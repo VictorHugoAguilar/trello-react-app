@@ -11,6 +11,7 @@
     "fontsource-roboto": "^2.2.6",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
+    "react-beautiful-dnd": "^13.0.0",
     "react-dom": "^16.13.1",
     "react-id-generator": "^3.0.1",
     "react-redux": "^7.2.0",
