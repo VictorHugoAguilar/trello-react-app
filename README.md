@@ -1,69 +1,85 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# App Trello simil
 
-## Available Scripts
+_Esta App, es una imitación de la original Trello, pero más básica, aunque funcional_
 
-In the project directory, you can run:
+Esta App, actualmente esta app no tiene back, solo es front, con lo que todo es volátil, los datos se eliminan, si actualizamos la página, porque lo que se prentende es aprender a utilizar el flujo de react-redux. Utilizando acciones y reducers.
 
-### `yarn start`
+## Comenzando 🚀
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+_Descargar el proyecto._
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Instalar las dependencias y luego levantar el servidor node.
 
-### `yarn test`
+### Pre-requisitos 📋
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_Que cosas necesitas para instalar el software y como instalarlas_
 
-### `yarn build`
+```
+Node,
+NPM
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Instalación 🔧
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+_Descargar las dependencias del proyecto_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_Ejecutamos los siguientes comandos_
 
-### `yarn eject`
+```
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+_con esto descargaremos las dependecias que estamos utilizando en nuestro proyecto_
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+````
+"dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "fontsource-roboto": "^2.2.6",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-beautiful-dnd": "^13.0.0",
+    "react-dom": "^16.13.1",
+    "react-id-generator": "^3.0.1",
+    "react-redux": "^7.2.0",
+    "react-scripts": "3.4.1",
+    "react-textarea-autosize": "^8.2.0",
+    "redux": "^4.0.5",
+    "uid-generator": "^2.0.0"
+  },
+````
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+_Para levantar la app ejecutamos el siguiente comando_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+    npm start
+```
 
-## Learn More
+### Front-end 🔩
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+_Todo creado con react_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Construido con 🛠️
 
-### Code Splitting
+_La app esta desarrollada con react-redux_
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* [NPM](https://www.npmjs.com/) - Manejador de dependencias
+* [MATERIAL-UI](https://material-ui.com/) - El framework web usado
+* [ICONS-MATERIAL-UI](https://material.io/resources/icons/?style=baseline) - Icons - 
+* [SASS](https://sass-lang.com/) - Estilos SASS - Preprocesamiento CSS - 
 
-### Analyzing the Bundle Size
+## Autores ✒️
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+* **Victor Hugo Aguilar** - *Trabajo Inicial* - [VictorHugoAguilar](https://github.com/VictorHugoAguilar)
 
-### Making a Progressive Web App
+## Licencia 📄
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+---
+⌨️ con ❤️ por [VictorHugoAguilar](https://github.com/VictorHugoAguilar) 😊
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# trello-react-app
