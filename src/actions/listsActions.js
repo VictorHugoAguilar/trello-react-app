@@ -7,4 +7,22 @@ export const addList = title => {
     }
 }
 
+export const sort = ( 
+    droppableIdStart,
+    droppableIdEnd,
+    droppableIndexStart,
+    droppableIndexEnd,
+    droppableId
+)  => {
+    return {
+        type: CONSTANTS.DRAG_SORT,
+        payload : {
+            droppableIdStart,
+            droppableIdEnd,
+            droppableIndexStart,
+            droppableIndexEnd,
+            droppableId
+        }
+    }
+}
 
